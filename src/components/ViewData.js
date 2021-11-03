@@ -35,7 +35,7 @@ export default function ViewData({ weatherData = { data: undefined, isLoading: f
           <Col className="d-flex align-items-center justify-content-center">
             <div className="ml-sm-3 ml-md-3 ml-lg-3">
               <div className="my-1">
-                <p className="mb-2"><span className="fw-bold">Temperature:</span> {weatherData.data?.main.temp || 0} °C</p>
+                <p className="mb-2"><span className="fw-bold">Temperature:</span> {Math.floor(weatherData.data?.main.temp || 0)} °C</p>
               </div>
               <div className="my-1">
                 <p className="mb-2"><span className="fw-bold">Air pressure:</span> {weatherData.data?.main.pressure || 0} hPa</p>
