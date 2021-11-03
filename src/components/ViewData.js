@@ -38,7 +38,7 @@ export default function ViewData({ weatherData = { data: undefined, isLoading: f
                 <p className="mb-2"><span className="fw-bold">Temperature:</span> {weatherData.data?.main.temp || 0} °C</p>
               </div>
               <div className="my-1">
-                <p className="mb-2"><span className="fw-bold">Air pressure:</span> {weatherData.data?.main.pressure || 0} mbar</p>
+                <p className="mb-2"><span className="fw-bold">Air pressure:</span> {weatherData.data?.main.pressure || 0} hPa</p>
               </div>
               <div class="my-1">
                 <p className="mb-2"><span className="fw-bold">Humidity:</span> {weatherData.data?.main.humidity || 0} %</p>
