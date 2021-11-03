@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Map from './components/Map';
+import TableEmbed from './components/TableauEmbed';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
         <div className="col-4 text-center">
           <h1 className="pt-5">Nome città</h1>
         </div>
+        <TableEmbed />
       </div>
   </>;
 }
