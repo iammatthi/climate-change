@@ -22,10 +22,10 @@ export default function App() {
   return <>
     <Container>
       <Row>
-        <Col sm={8} className="justify-content-center">
+        <Col lg={8} className="justify-content-center">
           <Map onClickMarker={handleClickMarker} />
         </Col>
-        <Col sm={4} className="justify-content-center">
+        <Col lg={4} className="justify-content-center">
           <ViewData weatherData={weatherData} />
         </Col>
       </Row>
