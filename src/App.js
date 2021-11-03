@@ -1,21 +1,34 @@
 import React from 'react';
-import './App.css';
+import useWeatherApi from './hooks/useWeatherApi'
 import Map from './components/Map';
+import ViewData from './components/ViewData';
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
-  const handleClickNewPosition = (latlng) => {
+  const [weatherData, setWeatherData] = useWeatherApi()
+
+  const handleClickMarker = (latlng) => {
     console.log(latlng);
+
+    if (!weatherData.isLoading)
+      setWeatherData({ ...weatherData, latlng })
   }
 
   return <>
-      <div>
-        <div className="col-8">
-          <Map onClickPosition={handleClickNewPosition} />
-        </div>
-        <div className="col-4 text-center">
-          <h1 className="pt-5">Nome città</h1>
-        </div>
-      </div>
+    <Container>
+      <Row>
+        <Col sm={8} className="justify-content-center">
+          <Map onClickMarker={handleClickMarker} />
+        </Col>
+        <Col sm={4} className="justify-content-center">
+          <ViewData weatherData={weatherData} />
+        </Col>
+      </Row>
+    </Container>
   </>;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { MapContainer, Tooltip, Popup, TileLayer, Marker } from 'react-leaflet'
 
-export default function Map({ onClickPosition }) {
+export default function Map({ onClickMarker }) {
     var markers = [
         {
             name: "Lugano",
@@ -12,7 +12,7 @@ export default function Map({ onClickPosition }) {
             position: [46.17086, 8.79953]
         },
         {
-            name: "Zürich",
+            name: "Zurich",
             position: [47.36667, 8.55]
         },
         {
@@ -31,7 +31,7 @@ export default function Map({ onClickPosition }) {
         scrollWheelZoom={false}
         doubleClickZoom={false}
         closePopupOnClick={false}
-        dragging={false}
+        dragging={true}
         zoomSnap={false}
         zoomDelta={false}
         trackResize={false}
@@ -50,7 +50,7 @@ export default function Map({ onClickPosition }) {
                         position={marker.position}
                         eventHandlers={{
                             click: (e) => {
-                                onClickPosition(e.latlng);
+                                onClickMarker(e.latlng);
                             },
                         }}
                     >
