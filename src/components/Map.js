@@ -25,38 +25,9 @@ export default function Map({ onClickPosition }) {
         },
     ];
 
-    // return (
-    //     <MapContainer center={[46.801111, 8.226667]}
-    //         zoom={8}
-    //         style={{ height: '100%' }}
-    //         doubleClickZoom={false}
-    //         closePopupOnClick={false}
-    //         dragging={false}
-    //         zoomSnap={false}
-    //         zoomDelta={false}
-    //         trackResize={false}
-    //         touchZoom={false}
-    //         scrollWheelZoom={false}
-    //         zoomControl={false}>
-    //         <TileLayer
-    //             url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-    //             attribution='&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors'
-    //         />
-    //         {
-    //             markers.map(marker => {
-    //                 return (
-    //                     <Marker key={marker.name} position={marker.position} onClick={handleClick}>
-    //                         <Tooltip>{marker.name}</Tooltip>
-    //                     </Marker>
-    //                 );
-    //             })
-    //         }
-    //     </MapContainer>
-    // );
-
     return <MapContainer
         center={[46.801111, 8.226667]}
-        zoom={8}
+        zoom={7.8}
         scrollWheelZoom={false}
         doubleClickZoom={false}
         closePopupOnClick={false}
