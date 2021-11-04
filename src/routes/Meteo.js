@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import useWeatherApi from '../hooks/useWeatherApi'
 import Map from '../components/Map';
@@ -6,7 +6,6 @@ import ViewData from '../components/ViewData';
 
 import cities from "../data/cities";
 import TableEmbed from '../components/TableauEmbed';
-
 
 
 export default function Meteo() {
@@ -20,21 +19,26 @@ export default function Meteo() {
       setWeatherData({ ...weatherData, latlng: newCity.position })
   }
 
+  useEffect(() => {
+    document.title = "Meteo"
+  }, []);
+
   return (
     <Container>
-      <Row style={{ minHeight: "75vh" }}>
-        <Col lg={8} className="justify-content-center">
+      <Row>
+        <Col lg={8} style={{ minHeight: "500px", marginTop: "50px"  }} className="justify-content-center">
           <Map onClickMarker={handleClickMarker} />
         </Col>
-        <Col lg={4} className="justify-content-center">
+        <Col lg={4} style={{ marginTop: "50px" }} className="d-flex align-items-center justify-content-center">
           <ViewData city={city} weatherData={weatherData} />
         </Col>
       </Row>
       {city.graphs.map((graph) => {
         return (
-          <Row key={graph}>
+          <Row style={{ marginTop: "50px" }} key={graph}>
             <Col>
-              <TableEmbed url={graph}/>
+              <h2 style={{ paddingBottom: "10px" }}>Graphs</h2>
+              <TableEmbed url={graph} />
             </Col>
           </Row>
         )

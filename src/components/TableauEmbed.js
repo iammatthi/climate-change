@@ -19,7 +19,7 @@ function TableEmbed({ url }) {
 
     return (
         <div>
-            <div ref={ref}></div>
+            <div ref={ref} style={{ marginBottom:"20px" }}></div>
         </div>
     );
 }

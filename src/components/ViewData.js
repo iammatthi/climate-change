@@ -1,9 +1,7 @@
 import React from 'react'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import { Container, Row, Col, Card } from 'react-bootstrap'
 
-export default function ViewData({ city={}, weatherData = { data: undefined, isLoading: false, error: null } }) {
+export default function ViewData({ city = {}, weatherData = { data: undefined, isLoading: false, error: null } }) {
   if (weatherData.error) {
     return (
       <Container className="p-3 mx-auto">
@@ -22,16 +20,12 @@ export default function ViewData({ city={}, weatherData = { data: undefined, isL
     );
   } else {
     return (
-      <Container className="p-3 mx-auto">
-        <Row className="text-center">
-          <Col className="h3 mb-4 fw-bold">{city?.name}</Col>
-        </Row>
-        <Row>
-          <Col className="text-center">
-            <img src={`https://openweathermap.org/img/wn/${weatherData.data?.weather[0].icon}@2x.png`} />
-            <p className="my-2 text-capitalize fs-4">{weatherData.data?.weather[0].main}</p>
-          </Col>
-          <Col className="d-flex align-items-center justify-content-center">
+      <Card style={{ width: '18rem' , height: '100%'}}>
+        <Card.Header as="h3">{city?.name}</Card.Header>
+        <Card.Body className="text-center d-flex flex-column align-items-center justify-content-center">
+          <Card.Img variant="top" style={{ width: "50%" }} src={`https://openweathermap.org/img/wn/${weatherData.data?.weather[0].icon}@2x.png`} />
+          <Card.Text>
+            <p className="mb-4 text-capitalize text-center fs-4">{weatherData.data?.weather[0].main}</p>
             <div className="ml-sm-3 ml-md-3 ml-lg-3">
               <div className="my-1">
                 <p className="mb-2"><span className="fw-bold">Temperature:</span> {Math.floor(weatherData.data?.main.temp || 0)} °C</p>
@@ -43,9 +37,9 @@ export default function ViewData({ city={}, weatherData = { data: undefined, isL
                 <p className="mb-2"><span className="fw-bold">Humidity:</span> {weatherData.data?.main.humidity || 0} %</p>
               </div>
             </div>
-          </Col>
-        </Row>
-      </Container>
+          </Card.Text>
+        </Card.Body>
+      </Card>
     )
   }
 }
