@@ -5,6 +5,7 @@ import cities from "../data/cities";
 
 export default function Map({ onClickMarker }) {
   return <MapContainer
+    style={{ height: "100%" }}
     center={[46.801111, 8.226667]}
     zoom={7.8}
     scrollWheelZoom={false}

@@ -3,10 +3,25 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import Meteo from "./routes/Meteo";
+import ClimateChange from "./routes/ClimateChange";
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route path="" element={<Meteo />} />
+          <Route path="climate-change" element={<ClimateChange />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

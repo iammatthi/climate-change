@@ -1,38 +1,26 @@
 import React from 'react';
-import useWeatherApi from './hooks/useWeatherApi'
-import Map from './components/Map';
-import TableEmbed from './components/TableauEmbed';
-import ViewData from './components/ViewData';
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Link, Outlet } from 'react-router-dom';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
-  const [weatherData, setWeatherData] = useWeatherApi()
-
-  const handleClickMarker = (city) => {
-    console.log(city);
-
-    if (!weatherData.isLoading)
-      setWeatherData({ ...weatherData, latlng: city.position })
-  }
-
-  return <>
-    <Container>
-      <Row>
-        <Col lg={8} className="justify-content-center">
-          <Map onClickMarker={handleClickMarker} />
-        </Col>
-        <Col lg={4} className="justify-content-center">
-          <ViewData weatherData={weatherData} />
-        </Col>
-      </Row>
-      <Row>
-        <TableEmbed />
-      </Row>
-    </Container>
-  </>;
+  return (
+    <>
+      <Navbar bg="light" expand="lg">
+        <Container>
+          <Navbar.Brand as={Link} to="/">Climate change</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link as={Link} to="/">Meteo</Nav.Link>
+              <Nav.Link as={Link} to="/climate-change">How is the world changing?</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      <Outlet />
+    </>
+  );
 }

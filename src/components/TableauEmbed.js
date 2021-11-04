@@ -16,11 +16,10 @@ function TableEmbed() {
 
     useEffect(() => {
         initViz();
-    },[])
+    }, [])
 
     return (
         <div>
-            <p>Prova tableau</p>
             <div ref={ref}></div>
         </div>
     );
