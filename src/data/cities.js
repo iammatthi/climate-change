@@ -6,7 +6,7 @@ export default [
       lng: 8.96004
     },
     graphs: [
-      "https://public.tableau.com/views/Complete_dashboard/LuganoTrends?:language=en-US"
+      "https://public.tableau.com/views/LuganoTrends/LuganoTrends?:language=en-US"
     ]
   },
   {
@@ -16,7 +16,7 @@ export default [
       lng: 8.79953
     },
     graphs: [
-      "https://public.tableau.com/views/Complete_dashboard/LocarnoTrends?:language=en-US"
+      "https://public.tableau.com/views/LocarnoTrends/LocarnoTrends?:language=en-US"
     ]
   },
   {
@@ -26,7 +26,7 @@ export default [
       lng: 8.55
     },
     graphs: [
-      "https://public.tableau.com/views/Complete_dashboard/ZurichTrends?:language=en-US"
+      "https://public.tableau.com/views/ZurichTrends/ZurichTrends?:language=en-US"
     ]
   },
   {
@@ -36,7 +36,7 @@ export default [
       lng: 6.14569
     },
     graphs: [
-      "https://public.tableau.com/views/Complete_dashboard/GenevaTrends?:language=en-US"
+      "https://public.tableau.com/views/GenevaTrends/GenevaTrends?:language=en-US"
     ]
   },
   {
@@ -46,7 +46,7 @@ export default [
       lng: 7.44744
     },
     graphs: [
-      "https://public.tableau.com/views/Complete_dashboard/BernTrends?:language=en-US"
+      "https://public.tableau.com/views/BernTrends_16360490156910/BernTrends?:language=en-US"
     ]
   }
 ]

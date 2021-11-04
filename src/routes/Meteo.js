@@ -33,11 +33,6 @@ export default function Meteo() {
           <ViewData city={city} weatherData={weatherData} />
         </Col>
       </Row>
-      <Row>
-        <Col>
-          <h2>Historical data</h2>
-        </Col>
-      </Row>
       {city.graphs.map((graph) => {
         return (
           <Row style={{ marginTop: "25px" }} key={graph}>
