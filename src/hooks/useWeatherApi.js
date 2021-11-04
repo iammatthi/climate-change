@@ -31,7 +31,7 @@ export default function useWeatherApi(latlng = cities[0].position) {
         // data downloaded
         setWeatherData({
           ...weatherData,
-          data,
+          data: data,
           isLoading: false,
           error: null
         });

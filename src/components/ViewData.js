@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-export default function ViewData({ weatherData = { data: undefined, isLoading: false, error: null } }) {
+export default function ViewData({ city={}, weatherData = { data: undefined, isLoading: false, error: null } }) {
   if (weatherData.error) {
     return (
       <Container className="p-3 mx-auto">
@@ -24,7 +24,7 @@ export default function ViewData({ weatherData = { data: undefined, isLoading: f
     return (
       <Container className="p-3 mx-auto">
         <Row className="text-center">
-          <Col className="h3 mb-4 fw-bold">{weatherData.data?.name}</Col>
+          <Col className="h3 mb-4 fw-bold">{city?.name}</Col>
         </Row>
         <Row>
           <Col className="text-center">

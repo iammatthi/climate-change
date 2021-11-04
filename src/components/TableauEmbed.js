@@ -2,12 +2,11 @@ import React, { useRef, useEffect } from "react";
 
 const { tableau } = window;
 
-function TableEmbed() {
+function TableEmbed({ url }) {
     const ref = useRef(null);
-    const url = "https://public.tableau.com/views/WorldTemperaturesHeatmap/WorldTemperaturesHeatmap";
 
     const option = {
-        devvice: "desktop",
+        device: "desktop",
     };
 
     function initViz() {
