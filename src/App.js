@@ -12,11 +12,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function App() {
   const [weatherData, setWeatherData] = useWeatherApi()
 
-  const handleClickMarker = (latlng) => {
-    console.log(latlng);
+  const handleClickMarker = (city) => {
+    console.log(city);
 
     if (!weatherData.isLoading)
-      setWeatherData({ ...weatherData, latlng })
+      setWeatherData({ ...weatherData, latlng: city.position })
   }
 
   return <>

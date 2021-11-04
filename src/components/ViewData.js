@@ -4,19 +4,18 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 export default function ViewData({ weatherData = { data: undefined, isLoading: false, error: null } }) {
-  console.log(weatherData.data);
   if (weatherData.error) {
     return (
-      <Container className="p-3 mx-auto text-center">
-        <Row>
+      <Container className="p-3 mx-auto">
+        <Row className="text-center">
           <Col className="h3 mb-2 fw-bold">An error occured</Col>
         </Row>
       </Container>
     );
   } else if (weatherData.isLoading) {
     return (
-      <Container className="p-3 mx-auto text-center">
-        <Row>
+      <Container className="p-3 mx-auto">
+        <Row className="text-center">
           <Col className="h3 mb-2 fw-bold">Loading...</Col>
         </Row>
       </Container>
@@ -40,7 +39,7 @@ export default function ViewData({ weatherData = { data: undefined, isLoading: f
               <div className="my-1">
                 <p className="mb-2"><span className="fw-bold">Air pressure:</span> {weatherData.data?.main.pressure || 0} hPa</p>
               </div>
-              <div class="my-1">
+              <div className="my-1">
                 <p className="mb-2"><span className="fw-bold">Humidity:</span> {weatherData.data?.main.humidity || 0} %</p>
               </div>
             </div>

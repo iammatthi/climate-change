@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react'
 import { getApiData } from '../utils/getApiData'
 
-export default function useWeatherApi(lat = 46.003581482582945, lng = 8.951311985749403) {
+import cities from "../data/cities";
+
+export default function useWeatherApi(latlng = cities[0].position) {
   const [weatherData, setWeatherData] = useState({
-    latlng: {
-      lat: lat,
-      lng: lng
-    },
+    latlng: latlng,
     isLoading: false,
     error: null
   })
