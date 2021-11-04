@@ -9,7 +9,7 @@ export default function ClimateChange() {
   }, []);
 
   return (
-    <Container>
+    <Container className="fs-6">
       <Row>
         <Col>
           <p>
@@ -17,7 +17,7 @@ export default function ClimateChange() {
           </p>
         </Col>
       </Row>
-      <Row>
+      <Row className="mb-5">
         <Col>
           <p>
             The first graph we would like to show you is about the swiss median temperature and how even here in the alps, using the most robust measurement, we can clearly see an increase in temperature.
@@ -25,7 +25,7 @@ export default function ClimateChange() {
           <TableEmbed url={"https://public.tableau.com/views/MedianTemperature_16360444545410/SwissMedianTemperature?:language=en-US"} />
         </Col>
       </Row>
-      <Row>
+      <Row className="mb-5">
         <Col>
           <p>
             This map presents the change in median temperature around the world, as you can see the world is heating up.
@@ -33,7 +33,7 @@ export default function ClimateChange() {
           <TableEmbed url={"https://public.tableau.com/views/WorldTemperaturesHeatmap/WorldTemperaturesHeatmap?:language=en-US"} />
         </Col>
       </Row>
-      <Row>
+      <Row className="mb-5">
         <Col>
           <p>
             If you'd rather see the same kind of visualization as the first one we showed you, here is the same graph for the world median temperature, we also included the uncertainty of the measurements and a forecast range of where we are headed.

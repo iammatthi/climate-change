@@ -7,6 +7,7 @@ function TableEmbed({ url }) {
 
   const option = {
     device: "desktop",
+    hideTabs: true
   };
 
   function initViz() {
