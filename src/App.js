@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function App() {
   return (
     <>
-      <Navbar bg="light" expand="lg">
+      <Navbar style={{ backgroundColor: "#2c2c2c" }} variant="dark" expand="lg">
         <Container>
           <Navbar.Brand as={Link} to="/">
             <img
@@ -32,7 +32,9 @@ export default function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Outlet />
+      <Container className="py-5">
+        <Outlet />
+      </Container>
     </>
   );
 }

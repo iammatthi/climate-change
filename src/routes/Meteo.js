@@ -26,18 +26,22 @@ export default function Meteo() {
   return (
     <Container>
       <Row>
-        <Col lg={8} style={{ minHeight: "500px", marginTop: "50px"  }} className="justify-content-center">
+        <Col lg={8} style={{ minHeight: "500px", marginBottom: "50px" }} className="justify-content-center">
           <Map onClickMarker={handleClickMarker} />
         </Col>
-        <Col lg={4} style={{ marginTop: "50px" }} className="d-flex align-items-center justify-content-center">
+        <Col lg={4} style={{ marginBottom: "50px" }} className="d-flex align-items-center justify-content-center">
           <ViewData city={city} weatherData={weatherData} />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <h2 style={{ color: "white" }}>Graphs</h2>
         </Col>
       </Row>
       {city.graphs.map((graph) => {
         return (
-          <Row style={{ marginTop: "50px" }} key={graph}>
+          <Row style={{ marginTop: "25px" }} key={graph}>
             <Col>
-              <h2 style={{ paddingBottom: "10px" }}>Graphs</h2>
               <TableEmbed url={graph} />
             </Col>
           </Row>

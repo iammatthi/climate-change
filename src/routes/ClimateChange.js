@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 export default function ClimateChange() {
 
   useEffect(() => {
-    document.title = "World is changing"
+    document.title = "Our world is changing"
   }, []);
 
   return (
