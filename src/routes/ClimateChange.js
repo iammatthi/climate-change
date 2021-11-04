@@ -44,7 +44,7 @@ export default function ClimateChange() {
       <Row>
         <Col>
           <p>
-            Finally, being a bit thought provoking, we present to you the increase in co2 in the atmosphere, the objective of this page is not to argue for a causation between the two measurements, we would be happy if you looked into it and decide for yourselves.
+            Finally, being a bit thought provoking, we present to you the increase in co2 in the atmosphere, the objective of this page is not to argue for a causation between the two measurements, we would be happy if, after visiting our page, you look into it and decide for yourselves.
           </p>
           <TableEmbed url={"https://public.tableau.com/views/TemperaturevsCo2/TemperatureandCo2SidebySide_?:language=en-US"} />
         </Col>

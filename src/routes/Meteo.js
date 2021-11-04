@@ -35,7 +35,7 @@ export default function Meteo() {
       </Row>
       <Row>
         <Col>
-          <h2>Graphs</h2>
+          <h2>Historical data</h2>
         </Col>
       </Row>
       {city.graphs.map((graph) => {
