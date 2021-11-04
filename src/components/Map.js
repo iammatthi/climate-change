@@ -1,5 +1,6 @@
 import React from "react";
 import { MapContainer, Tooltip, TileLayer, Marker } from 'react-leaflet'
+import credentials from '../config'
 
 import cities from "../data/cities";
 
@@ -18,7 +19,7 @@ export default function Map({ onClickMarker }) {
     touchZoom={false}
     zoomControl={false}
   >
-    <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+    <TileLayer url={`https://api.mapbox.com/styles/v1/iammatthi/ckvl29wmi1ple14pisakalhwq/tiles/256/{z}/{x}/{y}@2x?access_token=${credentials.apiKeyMapbox}`} />
     {
       cities.map(city => {
         return (
