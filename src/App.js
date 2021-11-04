@@ -19,7 +19,7 @@ export default function App() {
               width="30"
               height="30"
               className="d-inline-block align-top"
-            />{' '}
+              style={{ marginRight: "8px" }} />
             Climate change
           </Navbar.Brand>
 
