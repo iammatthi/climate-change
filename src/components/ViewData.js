@@ -6,7 +6,7 @@ export default function ViewData({ city = {}, weatherData = { data: undefined, i
   if (weatherData.error) {
     child = (
       <Card.Text>
-        Loading...
+        An error occured
       </Card.Text>
     );
   } else if (weatherData.isLoading) {
