@@ -44,7 +44,7 @@ export default function ViewData({ city = {}, weatherData = { data: undefined, i
   }
 
   return (
-    <Card style={{ width: '100%', height: '100%', backgroundColor: "#2c2c2c", color: "white" }}>
+    <Card style={{ width: '100%', height: '100%' }}>
       <Card.Header as="h3">{city?.name}</Card.Header>
       <Card.Body className="text-center d-flex flex-column align-items-center justify-content-center">
         {child}

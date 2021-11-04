@@ -10,17 +10,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function App() {
   return (
     <>
-      <Navbar style={{ backgroundColor: "#2c2c2c" }} variant="dark" expand="lg">
+      <Navbar bg="light" variant="light" expand="lg">
         <Container>
           <Navbar.Brand as={Link} to="/">
             <img
-              alt=""
+              alt="Logo"
               src={Logo}
               width="30"
               height="30"
               className="d-inline-block align-top"
               style={{ marginRight: "8px" }} />
-            Climate change
+            Climate Change
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

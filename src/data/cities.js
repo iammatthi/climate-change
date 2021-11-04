@@ -6,7 +6,7 @@ export default [
       lng: 8.96004
     },
     graphs: [
-      "https://public.tableau.com/views/Data_Points/LuganoTrends"
+      "https://public.tableau.com/views/single_data_point/LuganoTrends"
     ]
   },
   {
@@ -16,7 +16,7 @@ export default [
       lng: 8.79953
     },
     graphs: [
-      "https://public.tableau.com/views/Data_Points/LocarnoTrends"
+      "https://public.tableau.com/views/single_data_point/LocarnoTrends"
     ]
   },
   {
@@ -26,7 +26,7 @@ export default [
       lng: 8.55
     },
     graphs: [
-      "https://public.tableau.com/views/Data_Points/ZurichTrends"
+      "https://public.tableau.com/views/ZurichTrends/ZurichTrends"
     ]
   },
   {
@@ -36,7 +36,7 @@ export default [
       lng: 6.14569
     },
     graphs: [
-      "https://public.tableau.com/views/Data_Points/GenevaTrends"
+      "https://public.tableau.com/views/single_data_point/GenevaTrends"
     ]
   },
   {
@@ -46,7 +46,7 @@ export default [
       lng: 7.44744
     },
     graphs: [
-      "https://public.tableau.com/views/Data_Points/BernTrends"
+      "https://public.tableau.com/views/single_data_point/BernTrends"
     ]
   }
 ]
