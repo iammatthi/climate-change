@@ -10,9 +10,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function App() {
   return (
     <>
-      <Navbar bg="light" variant="light" expand="lg">
+      <Navbar bg="light" variant="light" expand="lg" style={{ height: "80px" }}>
         <Container>
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand as={Link} to="/" className="d-flex align-items-center fs-4">
             <img
               alt="Logo"
               src={Logo}
@@ -24,7 +24,7 @@ export default function App() {
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Collapse id="basic-navbar-nav" className="fs-5">
             <Nav className="me-auto">
               <Nav.Link as={Link} to="/">Meteo</Nav.Link>
               <Nav.Link as={Link} to="/climate-change">How is the world changing?</Nav.Link>
