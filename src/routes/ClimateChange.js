@@ -41,12 +41,20 @@ export default function ClimateChange() {
           <TableEmbed url={"https://public.tableau.com/views/WorldTemperatureTrend/WorldTemperatureTrend?:language=en-US"} />
         </Col>
       </Row>
+      <Row className="mb-5">
+        <Col>
+          <p>
+            Being a bit thought provoking, we present to you the increase in co2 in the atmosphere, our objective is not to argue for a causation between the two measurements, we would be happy if, after visiting our page, you look into it and decide for yourselves.
+          </p>
+          <TableEmbed url={"https://public.tableau.com/views/TemperaturevsCo2/TemperatureandCo2SidebySide_?:language=en-US"} />
+        </Col>
+      </Row>
       <Row>
         <Col>
           <p>
-            Finally, being a bit thought provoking, we present to you the increase in co2 in the atmosphere, the objective of this page is not to argue for a causation between the two measurements, we would be happy if, after visiting our page, you look into it and decide for yourselves.
+            Finally we would like to show two predictions of how the median temperature may evolve in the next 10 years here in Switzerland.
           </p>
-          <TableEmbed url={"https://public.tableau.com/views/TemperaturevsCo2/TemperatureandCo2SidebySide_?:language=en-US"} />
+          <TableEmbed url={"https://public.tableau.com/views/SwissHistoricalandPredictedMedianTemperatures/Historicalandpredictedmediantemperatures?:language=en-US"} />
         </Col>
       </Row>
     </Container>
