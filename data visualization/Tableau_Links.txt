@@ -1,0 +1,8 @@
+World:
+- https://public.tableau.com/app/profile/christian3883/viz/WorldTemperaturesHeatmap/WorldTemperaturesHeatmap
+- https://public.tableau.com/app/profile/christian3883/viz/WorldTemperatureTrend/WorldTemperatureTrend
+- https://public.tableau.com/app/profile/christian3883/viz/TemperaturevsCo2/TemperatureandCo2SidebySide_
+
+Swiss:
+https://public.tableau.com/app/profile/christian3883/viz/MedianTemperature_16360444545410/SwissMedianTemperature
+https://public.tableau.com/app/profile/christian3883/viz/SwissHistoricalandPredictedMedianTemperatures/Historicalandpredictedmediantemperatures
